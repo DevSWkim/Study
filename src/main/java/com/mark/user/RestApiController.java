@@ -1,4 +1,4 @@
-package com.mark.book;
+package com.mark.user;
 
 import java.util.HashMap;
 import java.util.Map;

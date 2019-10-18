@@ -1,4 +1,4 @@
-package com.mark.book;
+package com.mark.user;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

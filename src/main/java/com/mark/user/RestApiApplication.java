@@ -1,4 +1,4 @@
-package com.mark.book;
+package com.mark.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

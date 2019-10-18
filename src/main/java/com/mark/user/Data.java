@@ -1,4 +1,4 @@
-package com.mark.book;
+package com.mark.user;
 
 public class Data {
 
