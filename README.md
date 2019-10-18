@@ -34,4 +34,4 @@ REST 개념을 공부하기 위해서, Spring STS를 이용하여 RESTful API를
 ![update_user(jerry)_success](./screenshot/5.update_user(jerry)_success.png)
 ![users_after_update](./screenshot/6.users_after_update.png)
 ![delete_user(mark)](./screenshot/7.delete_user(mark).png)
-![user_after_user(mark)](./screentshot/8.user_after_user(mark).png)
+![user_after_user(mark)](./screenshot/8.user_after_user(mark).png)
