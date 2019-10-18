@@ -23,4 +23,7 @@ REST 개념을 공부하기 위해서, Spring STS를 이용하여 RESTful API를
    http://localhost:8080/user (사용자 아이디에 맞는 회원 정보조회) // get, post  
    http://localhost:8080/user/add (회원 정보 추가) // get, post  
    http://localhost:8080/user/update (회원 정보 수정) // get, post  
-   http://localhost:8080/user/delete (회원 정보 삭제) // get  
+   http://localhost:8080/user/delete (회원 정보 삭제) // get
+
+
+![main](./screenshot/0.main.png)   

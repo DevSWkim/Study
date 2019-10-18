@@ -3,9 +3,9 @@ package com.mark.user;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,7 +13,7 @@ public class RestApiController {
 
 	private Map<String, Data> userData = new HashMap<String, Data>();
 	
-	@RequestMapping("/")
+	@RequestMapping("")
 	public String getMain() {
 		return "총 회원 수 : " + userData.size();
 	}
@@ -24,8 +24,8 @@ public class RestApiController {
 		return userData.toString();
 	}
 	
-	@RequestMapping(value="/user", method= {RequestMethod.GET, RequestMethod.POST})
-	public String getUser(@RequestParam(value="id") String id) {
+	@RequestMapping(value="/user/{id}", method= {RequestMethod.GET, RequestMethod.POST})
+	public String getUser(@PathVariable(value="id") String id) {
 		
 		if(!userData.containsKey(id)) {
 			return id + "님은 회원이 아닙니다.";
@@ -34,10 +34,10 @@ public class RestApiController {
 		}
 	}
 	
-	@RequestMapping(value="/users/add", method= {RequestMethod.GET, RequestMethod.POST})
-	public Map<String, Data> addUser(@RequestParam(value="id") String id,
-									 @RequestParam(value="name") String name,
-									 @RequestParam(value="password") String password) {
+	@RequestMapping(value="/user/add/{id}/{name}/{password}", method= {RequestMethod.GET, RequestMethod.POST})
+	public Map<String, Data> addUser(@PathVariable(value="id") String id,
+									 @PathVariable(value="name") String name,
+									 @PathVariable(value="password") String password) {
 
 		Data data = new Data(id, password, name);
 		
@@ -46,10 +46,10 @@ public class RestApiController {
 		return userData;
 	}
 	
-	@RequestMapping(value="/users/update", method= {RequestMethod.GET, RequestMethod.POST})
-	public String updateUser(@RequestParam(value="id") String id,
-									 @RequestParam(value="name") String name,
-									 @RequestParam(value="password") String password) {
+	@RequestMapping(value="/user/update/{id}/{name}/{password}", method= {RequestMethod.GET, RequestMethod.POST})
+	public String updateUser(@PathVariable(value="id") String id,
+							 @PathVariable(value="name") String name,
+							 @PathVariable(value="password") String password) {
 
 		if(!userData.containsKey(id)) {
 			return id + "님은 회원이 아닙니다.";
@@ -65,8 +65,8 @@ public class RestApiController {
 		
 	}
 	
-	@RequestMapping(value="/users/delete", method=RequestMethod.GET)
-	public String deleteUser(@RequestParam(value="id") String id) {
+	@RequestMapping(value="/user/delete/{id}", method=RequestMethod.GET)
+	public String deleteUser(@PathVariable(value="id") String id) {
 
 		if(!userData.containsKey(id)) {
 			return id + "님은 회원이 아닙니다.";
@@ -76,5 +76,10 @@ public class RestApiController {
 		}
 		
 	}
+	
+//	@RequestMapping("/error")
+//	public String errorPage() {
+//		return "사용자 요청을 처리할 수 없습니다.";
+//	}
 
 }
