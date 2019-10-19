@@ -15,16 +15,16 @@ public class RestApiController {
 	
 	@RequestMapping("")
 	public String getMain() {
-		return "총 회원 수 : " + userData.size();
+		return "Server is running...";
 	}
 	
-	@RequestMapping(value="/users", method= {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value="/users", method= {RequestMethod.GET})
 	public String getAllUser() {
 		
 		return userData.toString();
 	}
 	
-	@RequestMapping(value="/user/{id}", method= {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value="/user/{id}", method= {RequestMethod.GET})
 	public String getUser(@PathVariable(value="id") String id) {
 		
 		if(!userData.containsKey(id)) {
@@ -34,23 +34,11 @@ public class RestApiController {
 		}
 	}
 	
-	@RequestMapping(value="/user/add/{id}/{name}/{password}", method= {RequestMethod.GET, RequestMethod.POST})
-	public Map<String, Data> addUser(@PathVariable(value="id") String id,
-									 @PathVariable(value="name") String name,
-									 @PathVariable(value="password") String password) {
-
-		Data data = new Data(id, password, name);
-		
-		userData.put(id, data);
-		
-		return userData;
-	}
-	
-	@RequestMapping(value="/user/update/{id}/{name}/{password}", method= {RequestMethod.GET, RequestMethod.POST})
-	public String updateUser(@PathVariable(value="id") String id,
+	@RequestMapping(value="/user/{id}", method= {RequestMethod.PUT})
+	public String modifyUser(@PathVariable(value="id") String id,
 							 @PathVariable(value="name") String name,
 							 @PathVariable(value="password") String password) {
-
+		
 		if(!userData.containsKey(id)) {
 			return id + "님은 회원이 아닙니다.";
 		} else {
@@ -62,7 +50,6 @@ public class RestApiController {
 				return id + "님의 패스워드가 올바르지 않습니다.";
 			}
 		}
-		
 	}
 	
 	@RequestMapping(value="/user/delete/{id}", method=RequestMethod.GET)
@@ -75,6 +62,18 @@ public class RestApiController {
 			return id + "님이 정상적으로 삭제되었습니다.";
 		}
 		
+	}
+	
+	@RequestMapping(value="/user/add/{id}/{name}/{password}", method= {RequestMethod.POST})
+	public Map<String, Data> addUser(@PathVariable(value="id") String id,
+									 @PathVariable(value="name") String name,
+									 @PathVariable(value="password") String password) {
+
+		Data data = new Data(id, password, name);
+		
+		userData.put(id, data);
+		
+		return userData;
 	}
 	
 //	@RequestMapping("/error")
