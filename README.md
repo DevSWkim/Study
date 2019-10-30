@@ -25,12 +25,24 @@ REST 개념을 공부하기 위해서, Spring STS를 이용하여 RESTful API를
    http://localhost:8080/user/ (회원 정보 수정) // put  
    http://localhost:8080/user/ (회원 정보 삭제) // delete
 
-
+http://localhost:8080 (helath check)
 ![main](./screenshot/0.main.png)   
+
+http://localhost:8080/users (모든 회원 정보)
 ![1.users](./screenshot/1.users.png)
+
+http://localhost:8080/user (사용자 정보 추가_POST)
 ![2.add_user(mark)](./screenshot/2.add_user(mark).png)
 ![3.add_user(apple)](./screenshot/3.add_user(apple).png)
-![4.put_user(mark))_failed](./screenshot/4.put_user(mark))_failed.png)
+
+http://localhost:8080/user (사용자 정보 수정_PUT_실패)
+![4.put_user(mark))_failed](./screenshot/4.put_user(mark)_failed.png)
+
+http://localhost:8080/user (사용자 정보 수정_PUT_성공)
 ![5.put_user(mark)_success](./screenshot/5.put_user(mark)_success.png)
+
+http://localhost:8080/user (사용자 정보 삭제_DELETE)
 ![6.delete_user(apple)](./screenshot/6.delete_user(apple).png)
+
+http://localhost:8080/user (일부 사용자 정보 삭제 후 재 조회)
 ![7.users_after_delete](./screenshot/7.users_after_delete.png)
