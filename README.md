@@ -27,11 +27,10 @@ REST 개념을 공부하기 위해서, Spring STS를 이용하여 RESTful API를
 
 
 ![main](./screenshot/0.main.png)   
-![init_users](./screenshot/1.init_users.png)
-![add_user(mark)](./screenshot/2.add_user(mark).png)
-![add_user(jerry)](./screenshot/3.add_user(jerry).png)
-![update_user(jerry)_failed](./screenshot/4.update_user(jerry)_failed.png)
-![update_user(jerry)_success](./screenshot/5.update_user(jerry)_success.png)
-![users_after_update](./screenshot/6.users_after_update.png)
-![delete_user(mark)](./screenshot/7.delete_user(mark).png)
-![user_after_user(mark)](./screenshot/8.user_after_user(mark).png)
+![1.users](./screenshot/1.users.png)
+![2.add_user(mark)](./screenshot/2.add_user(mark).png)
+![3.add_user(apple)](./screenshot/3.add_user(apple).png)
+![4.put_user(mark))_failed](./screenshot/4.put_user(mark))_failed.png)
+![5.put_user(mark)_success](./screenshot/5.put_user(mark)_success.png)
+![6.delete_user(apple)](./screenshot/6.delete_user(apple).png)
+![7.users_after_delete](./screenshot/7.users_after_delete.png)
