@@ -36,7 +36,7 @@ http://localhost:8080/user (사용자 정보 추가_POST)
 ![3.add_user(apple)](./screenshot/3.add_user(apple).png)
 
 http://localhost:8080/user (사용자 정보 수정_PUT_실패)
-![4.put_user(mark))_failed](./screenshot/4.put_user(mark)_failed.png)
+![4.put_user(mark)_failed](./screenshot/4.put_user(mark)_failed.png)
 
 http://localhost:8080/user (사용자 정보 수정_PUT_성공)
 ![5.put_user(mark)_success](./screenshot/5.put_user(mark)_success.png)
