@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -34,10 +35,10 @@ public class RestApiController {
 		}
 	}
 	
-	@RequestMapping(value="/user/{id}", method= {RequestMethod.PUT})
-	public String modifyUser(@PathVariable(value="id") String id,
-							 @PathVariable(value="name") String name,
-							 @PathVariable(value="password") String password) {
+	@RequestMapping(value="/user", method= {RequestMethod.PUT})
+	public String modifyUser(@RequestParam(value="id") String id,
+							 @RequestParam(value="name") String name,
+							 @RequestParam(value="password") String password) {
 		
 		if(!userData.containsKey(id)) {
 			return id + "님은 회원이 아닙니다.";
@@ -52,8 +53,8 @@ public class RestApiController {
 		}
 	}
 	
-	@RequestMapping(value="/user/delete/{id}", method=RequestMethod.GET)
-	public String deleteUser(@PathVariable(value="id") String id) {
+	@RequestMapping(value="/user", method=RequestMethod.DELETE)
+	public String deleteUser(@RequestParam(value="id") String id) {
 
 		if(!userData.containsKey(id)) {
 			return id + "님은 회원이 아닙니다.";
@@ -64,10 +65,10 @@ public class RestApiController {
 		
 	}
 	
-	@RequestMapping(value="/user/add/{id}/{name}/{password}", method= {RequestMethod.POST})
-	public Map<String, Data> addUser(@PathVariable(value="id") String id,
-									 @PathVariable(value="name") String name,
-									 @PathVariable(value="password") String password) {
+	@RequestMapping(value="/user", method= {RequestMethod.POST})
+	public Map<String, Data> addUser(@RequestParam(value="id") String id,
+									 @RequestParam(value="name") String name,
+									 @RequestParam(value="password") String password) {
 
 		Data data = new Data(id, password, name);
 		
