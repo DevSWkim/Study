@@ -47,7 +47,8 @@ http://localhost:8080/user (사용자 정보 삭제_DELETE)
 http://localhost:8080/user (일부 사용자 정보 삭제 후 재 조회)
 ![7.users_after_delete](./screenshot/7.users_after_delete.png)
 
-*Nginx 연습
+Nginx 연습
+----------
 nginx configure 수정
 ![nginx_config](./screenshot/nginx_config.png)
 
