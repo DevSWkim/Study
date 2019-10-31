@@ -46,3 +46,20 @@ http://localhost:8080/user (사용자 정보 삭제_DELETE)
 
 http://localhost:8080/user (일부 사용자 정보 삭제 후 재 조회)
 ![7.users_after_delete](./screenshot/7.users_after_delete.png)
+
+*Nginx 연습
+nginx configure 수정
+![nginx_config](./screenshot/nginx_config.png)
+
+경로 맵핑 소스
+![nginx_source](./screenshot/nginx_source.png)
+
+확인 1 (localhost:8080 -> localhost)
+![nginx_default](./screenshot/nginx_default.png)
+
+확인 2 (localhost/proxy1)
+![nginx_proxy1](./screenshot/nginx_proxy1.png)
+
+확인 3 (localhost/proxy2)
+![nginx_proxy2](./screenshot/nginx_proxy2.png) 
+
