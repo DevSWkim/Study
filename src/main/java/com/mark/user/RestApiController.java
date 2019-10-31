@@ -19,6 +19,21 @@ public class RestApiController {
 		return "Server is running...";
 	}
 	
+	@RequestMapping("/proxy1")
+	public String locationProxy1() {
+		return "Proxy1...";
+	}
+	
+	@RequestMapping("/proxy2")
+	public String locationProxy2() {
+		
+		// /proxy2를 호출하면, Proxy2...가 Return 되어야 하나,
+		// nginx.conf 에서 proxy2로 접근 할 때, users로 이동시켰기 떄문에
+		// {} 혹은 사용자의 정보를 조회하게 된다.
+		
+		return "Proxy2...";
+	}
+	
 	@RequestMapping(value="/users", method= {RequestMethod.GET})
 	public String getAllUser() {
 		
