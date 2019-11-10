@@ -52,7 +52,8 @@ Nginx 연습
 
 nginx configure 수정
 - location / 부분에서 80으로 들어오는 모든 요청을 8080으로 변경하므로, 각각의 요청에 따른 proxy_pass는 의미가 없어진다.
-![nginx_cofing(modify_wrong_the_problem)](./screentshot/nginx_cofing(modify_wrong_the_problem).png)
+
+![nginx_cofing(modify_wrong_the_problem)](./screenshot/nginx_cofing(modify_wrong_the_problem).png)
 
 경로 맵핑 소스
 ![nginx_source](./screenshot/nginx_source.png)
@@ -77,4 +78,4 @@ work_process 개수 증가 부분
 ![nginx_work_process](./screenshot/nginx_work_process.png)
 
 수정된 work_process 상태 보기
-![nginx_work_process(ps-ef)](./screentshot/nginx_work_process(ps-ef).png)
+![nginx_work_process(ps-ef)](./screenshot/nginx_work_process(ps-ef).png)
