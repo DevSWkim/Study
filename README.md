@@ -49,9 +49,11 @@ http://localhost:8080/user (일부 사용자 정보 삭제 후 재 조회)
 
 Nginx 연습
 ----------
+
 nginx configure 수정
 - location / 부분에서 80으로 들어오는 모든 요청을 8080으로 변경하므로, 각각의 요청에 따른 proxy_pass는 의미가 없어진다.
-![nginx_config](./screenshot/nginx_config.png)
+![nginx_cofing(modify_wrong_the_problem)](./screentshot/nginx_cofing(modify_wrong_the_problem).png)
+#![nginx_config](./screenshot/nginx_config.png)
 
 경로 맵핑 소스
 ![nginx_source](./screenshot/nginx_source.png)
@@ -65,3 +67,15 @@ nginx configure 수정
 확인 3 (localhost/proxy2)
 ![nginx_proxy2](./screenshot/nginx_proxy2.png) 
 
+
+Nginx 스터디 추가부분
+-----------
+
+- nginx는 기본적으로 1개의 work process 를 띄우는데 config 파일을 통해 여러개의 work process 를 띄울 수 있다.
+- work process 가 기본적으로 work_connection이 1024로설정 되어있으며, 1024 * 4 (수정한 nginx의 활성 work_process 개수) 을 통해 총 4096 clients/second 처리가 가능해진다.
+
+work_process 개수 증가 부분
+![nginx_work_process](./screenshot/nginx_work_process.png)
+
+수정된 work_process 상태 보기
+![nginx_work_process(ps-ef)](./screentshot/nginx_work_process(ps-ef).png)
