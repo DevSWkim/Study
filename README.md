@@ -79,3 +79,15 @@ work_process 개수 증가 부분
 
 수정된 work_process 상태 보기
 ![nginx_work_process(ps-ef)](./screenshot/nginx_work_process(ps-ef).png)
+
+Nginx Load Balancing 
+-----------
+
+Nginx Load Balancing Config
+![nginx_load_balance_config](./screenshot/nginx_load_balance.config.png)
+
+google
+![load_balance(google)](./screenshot/load_balance(google).png)
+
+bankware
+![load_balance(bankware)(./screenshot/load_balance(bankware).png)
