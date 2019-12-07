@@ -84,10 +84,10 @@ Nginx Load Balancing
 -----------
 
 Nginx Load Balancing Config
-![nginx_load_balance_config](./screenshot/nginx_load_balance.config.png)
+![nginx_load_balance_config](./screenshot/nginx_load_balance_config.png)
 
 google
 ![load_balance(google)](./screenshot/load_balance(google).png)
 
 bankware
-![load_balance(bankware)(./screenshot/load_balance(bankware).png)
+![load_balance(bankware)](./screenshot/load_balance(bankware).png)
